@@ -27,7 +27,7 @@ class BoardController @Autowired constructor(
 ) {
     @GetMapping("")
     fun getAllBoard(): List<Board> =
-        boardRepository.findAll().toList()
+        boardRepository.findAll().toList().reversed()
 
     @GetMapping("/{boardNo}")
     fun getSpecificBoard(@PathVariable boardNo: Long): Board =
