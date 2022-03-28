@@ -24,7 +24,7 @@ data class Board(
     var boardTitle: String,
     var boardAuthor: String,
     var boardContent: String,
-    @JsonIgnore var boardPassword: String,
+    @JsonIgnore var boardPassword: String? = null,
     var boardCreatedAt: LocalDateTime? = LocalDateTime.now(),
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE) var boardNo: Long? = null
 )
